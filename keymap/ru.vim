@@ -1,0 +1,69 @@
+﻿let b:keymap_name = "ru"
+
+loadkeymap
+'        ь        CYRILLIC SMALL LETTER SOFT SIGN
+A        А        CYRILLIC CAPITAL LETTER A
+B        Б        CYRILLIC CAPITAL LETTER BE
+C        Ц        CYRILLIC CAPITAL LETTER TSE
+CH       Ч        CYRILLIC CAPITAL LETTER CHE
+D        Д        CYRILLIC CAPITAL LETTER DE
+E        Е        CYRILLIC CAPITAL LETTER IE
+F        Ф        CYRILLIC CAPITAL LETTER EF
+G        Г        CYRILLIC CAPITAL LETTER GHE
+H        Х        CYRILLIC CAPITAL LETTER HA
+I        И        CYRILLIC CAPITAL LETTER I
+J        Й        CYRILLIC CAPITAL LETTER SHORT I
+JE       Э        CYRILLIC CAPITAL LETTER E
+JO       Ё        CYRILLIC CAPITAL LETTER IO
+JU       Ю        CYRILLIC CAPITAL LETTER YU
+K        К        CYRILLIC CAPITAL LETTER KA
+L        Л        CYRILLIC CAPITAL LETTER EL
+M        М        CYRILLIC CAPITAL LETTER EM
+N        Н        CYRILLIC CAPITAL LETTER EN
+O        О        CYRILLIC CAPITAL LETTER O
+P        П        CYRILLIC CAPITAL LETTER PE
+Q        Я        CYRILLIC CAPITAL LETTER YA
+R        Р        CYRILLIC CAPITAL LETTER ER
+S        С        CYRILLIC CAPITAL LETTER ES
+SC       Щ        CYRILLIC CAPITAL LETTER SHCHA
+SH       Ш        CYRILLIC CAPITAL LETTER SHA
+T        Т        CYRILLIC CAPITAL LETTER TE
+U        У        CYRILLIC CAPITAL LETTER U
+V        В        CYRILLIC CAPITAL LETTER VE
+X        Ж        CYRILLIC CAPITAL LETTER ZHE
+Y        Ы        CYRILLIC CAPITAL LETTER YERU
+Z        З        CYRILLIC CAPITAL LETTER ZE
+\"       Ь        CYRILLIC CAPITAL LETTER SOFT SIGN
+`        ъ        CYRILLIC SMALL LETTER HARD SIGN
+a        а        CYRILLIC SMALL LETTER A
+b        б        CYRILLIC SMALL LETTER BE
+c        ц        CYRILLIC SMALL LETTER TSE
+ch       ч        CYRILLIC SMALL LETTER CHE
+d        д        CYRILLIC SMALL LETTER DE
+e        е        CYRILLIC SMALL LETTER IE
+f        ф        CYRILLIC SMALL LETTER EF
+g        г        CYRILLIC SMALL LETTER GHE
+h        х        CYRILLIC SMALL LETTER HA
+i        и        CYRILLIC SMALL LETTER I
+j        й        CYRILLIC SMALL LETTER SHORT I
+je       э        CYRILLIC SMALL LETTER E
+jo       ё        CYRILLIC SMALL LETTER IO
+ju       ю        CYRILLIC SMALL LETTER YU
+k        к        CYRILLIC SMALL LETTER KA
+l        л        CYRILLIC SMALL LETTER EL
+m        м        CYRILLIC SMALL LETTER EM
+n        н        CYRILLIC SMALL LETTER EN
+o        о        CYRILLIC SMALL LETTER O
+p        п        CYRILLIC SMALL LETTER PE
+q        я        CYRILLIC SMALL LETTER YA
+r        р        CYRILLIC SMALL LETTER ER
+s        с        CYRILLIC SMALL LETTER ES
+sc       щ        CYRILLIC SMALL LETTER SHCHA
+t        т        CYRILLIC SMALL LETTER TE
+u        у        CYRILLIC SMALL LETTER U
+v        в        CYRILLIC SMALL LETTER VE
+w        ш        CYRILLIC SMALL LETTER SHA
+x        ж        CYRILLIC SMALL LETTER ZHE
+y        ы        CYRILLIC SMALL LETTER YERU
+z        з        CYRILLIC SMALL LETTER ZE
+~        Ъ        CYRILLIC CAPITAL LETTER HARD SIGN
