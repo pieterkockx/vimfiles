@@ -12,7 +12,7 @@ let s:show_tab = s:lcs . ",tab:>-"
 let _lcs = 1
 
 function DetectIndent(flag)
-  if search('^\t', 'cnw', 0, 10)
+  if search('^\t\t*[^\t]', 'cnw', 0, 10)
     if (a:flag) | let &lcs=s:hide_tab | endif
     if &expandtab || &shiftwidth != 0
       set tabstop=8 softtabstop=4 shiftwidth=0 noexpandtab

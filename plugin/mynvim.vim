@@ -3,6 +3,7 @@ if exists("loaded_mynvim") || !has("nvim")
 endif
 let loaded_mynvim = 1
 
+set inccommand=split
 set shada+=rterm://
 
 map <silent><F2> :sp term://bash \| startinsert<CR>
@@ -10,8 +11,8 @@ tnoremap    <F2> <C-\><C-N><C-W>c
 
 tnoremap <M-CR> <C-\><C-N>`.f$w
 
-noremap ]p "l]p
-noremap [p "l[p
+noremap <M-p> "l]p
+noremap <M-P> "l[p
 
 augroup mynvim
 au!

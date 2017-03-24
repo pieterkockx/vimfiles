@@ -1,8 +1,8 @@
 if has("nvim")
-  nmap <buffer> <silent><F5><F5> :up<CR>
+  nmap <buffer> <silent><F3> :up<CR>
   \:bo new<CR>:let
   \ w:schemeFile=expand("#:p")<CR>:set
-  \ bt=nofile bh=hide ft=scheme \|
+  \ bt=nofile bh=wipe ft=scheme \|
   \ exe "call termopen('csi -q " . w:schemeFile . "')" \|
   \ startinsert<CR>
 

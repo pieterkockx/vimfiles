@@ -244,7 +244,9 @@ nnoremap q  <C-W>
 
 noremap          qq q
 nnoremap <silent>qn :keepalt wincmd n<CR>
-                    \:setlocal bt=nofile bh=hide noswf<CR>
+                    \:setlocal bt=nofile bh=wipe noswf<CR>
+nnoremap <silent>qN :tabnew<CR>
+		    \:setlocal bt=nofile bh=wipe noswf<CR>
 
 au CmdwinEnter * map <buffer> qc <C-C><C-C>
 

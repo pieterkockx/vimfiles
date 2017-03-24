@@ -89,9 +89,9 @@ hi Todo cterm=bold,underline ctermfg=6
 
 " view
 hi clear FoldColumn
-hi FoldColumn cterm=bold ctermfg=4 ctermbg=0
+hi FoldColumn cterm=bold ctermfg=6 ctermbg=0
 hi clear Folded
-hi Folded cterm=bold ctermfg=4 ctermbg=0
+hi Folded cterm=bold ctermfg=6 ctermbg=0
 hi clear LineNr
 hi LineNr cterm=bold ctermfg=0
 hi clear StatusLine

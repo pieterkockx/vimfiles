@@ -36,7 +36,7 @@ nmap <silent><Leader>vg :exe "silent! vimgrep /" .
                         \ escape(input("<vimgrep>: "), '/') . "/j " .
                         \ join(argv(), ' ') \| bo copen 7 \| cw<CR>
 
-nmap <buffer> <silent><F5><F5> :let &makeef=QuickfixFile()<CR>:make!<CR>
+nmap <buffer> <silent><F8><F8> :let &makeef=QuickfixFile()<CR>:make!<CR>
 
 augroup myquickfix
 au!
