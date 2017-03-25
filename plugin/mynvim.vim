@@ -6,7 +6,7 @@ let loaded_mynvim = 1
 set inccommand=split
 set shada+=rterm://
 
-map <silent><F2> :sp term://bash \| startinsert<CR>
+map <silent><F2> :split term://bash \| startinsert<CR>
 tnoremap    <F2> <C-\><C-N><C-W>c
 
 tnoremap <M-CR> <C-\><C-N>`.f$w
