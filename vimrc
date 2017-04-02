@@ -37,7 +37,7 @@ set showcmd ttimeout ttimeoutlen=10
 set virtualedit=block
 set nowrap nolinebreak display=lastline
 
-set shiftwidth=4 softtabstop=4
+set shiftwidth=4 softtabstop=2
 set textwidth=76 formatoptions=bcoqj nojoinspaces
 
 function! FoldText()

@@ -29,7 +29,7 @@ nmap <buffer> <silent><F8><F7> :exe "bo 5new " .
 
 nmap <buffer> <silent><F8><F9> :up<CR>
      \:silent! exe "!" . _CC . " -E -H " .
-     \ expand("%") . " 2>\|/tmp/.vim/c/hdept-%:t:r \| " .
+     \ expand("%") . " 2>\|/tmp/.vim/c-hdept-%:t:r \| " .
      \ "sed '/^\\#/d;/./,/^$/\\!d' >\| " .
-     \ "/tmp/.vim/c/cpp-" . expand("%:t:r") . ".c"<CR>
-     \:new \| argl /tmp/.vim/c/cpp-#:t:r.c /tmp/.vim/c/hdept-#:t:r<CR>
+     \ "/tmp/.vim/c-cpp-" . expand("%:t:r") . ".c"<CR>
+     \:new \| argl /tmp/.vim/c-cpp-#:t:r.c /tmp/.vim/c-hdept-#:t:r<CR>

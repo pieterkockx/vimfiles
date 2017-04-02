@@ -8,8 +8,4 @@ if has("nvim")
   \:exe "call termopen('csi -q " . b:schemeFile . "')" \| startinsert<CR>
 
   tnoremap <buffer> <M-CR> <C-\><C-N>`.0f l
-
-  tnoremap <buffer> <M-Tab> <C-\><C-N><C-W>p`^
-  nnoremap <buffer> <M-Tab> <C-W>pgi
-  inoremap <buffer> <M-Tab> <Esc><C-W>pgi
 endif
