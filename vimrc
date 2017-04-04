@@ -82,7 +82,7 @@ set wildmenu
 
 syntax          on
 filetype plugin on
-filetype indent off
+filetype indent on
 
 if has("gui_running")
   colorscheme darkblue

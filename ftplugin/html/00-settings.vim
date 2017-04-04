@@ -1,1 +1,1 @@
-set nosmartindent autoindent
+set nocindent nosmartindent autoindent
