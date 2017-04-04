@@ -51,6 +51,9 @@ syn keyword jsonNull null
 syn region jsonFold matchgroup=jsonBraces start="{" end=/}\(\_s\+\ze\("\|{\)\)\@!/ transparent fold
 syn region jsonFold matchgroup=jsonBraces start="\[" end=/]\(\_s\+\ze"\)\@!/ transparent fold
 
+syn sync fromstart
+syn sync maxlines=100
+
 HiLink jsonPadding Operator
 HiLink jsonString String
 HiLink jsonTest Label
@@ -61,14 +64,15 @@ HiLink jsonNull Function
 HiLink jsonBoolean Boolean
 HiLink jsonKeyword Label
 
-HiLink jsonNumError Error
-HiLink jsonCommentError Error
-HiLink jsonSemicolonError Error
-HiLink jsonTrailingCommaError Error
-HiLink jsonMissingCommaError Error
-HiLink jsonStringSQError Error
-HiLink jsonNoQuotesError Error
-HiLink jsonTripleQuotesError Error
+HiLink jsonNumError jsonError
+HiLink jsonCommentError jsonError
+HiLink jsonSemicolonError jsonError
+HiLink jsonTrailingCommaError jsonError
+HiLink jsonMissingCommaError jsonError
+HiLink jsonStringSQError jsonError
+HiLink jsonNoQuotesError jsonError
+HiLink jsonTripleQuotesError jsonError
+HiLink jsonError Error
 
 HiLink jsonQuote Quote
 HiLink jsonNoise Noise

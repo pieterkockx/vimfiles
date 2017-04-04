@@ -73,6 +73,7 @@ hi clear Type
 
 " syntax - specific
 hi htmlTagName cterm=bold ctermfg=2
+hi jsonError cterm=bold,underline
 hi schemeFunc ctermfg=3
 hi schemeBoolean cterm=bold ctermfg=0
 
