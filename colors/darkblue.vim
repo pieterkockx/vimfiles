@@ -103,7 +103,7 @@ hi VertSplit guifg=#3f51b5 guibg=#0b1a2f
 hi clear DiffAdd
 hi DiffAdd guifg=#e0e0e0 guibg=#3f51b5
 hi clear DiffChange
-hi DiffChange
+hi DiffChange cterm=underline
 hi clear DiffDelete
 hi DiffDelete gui=bold guifg=#101010 guibg=#3f51b5
 hi clear DiffText
