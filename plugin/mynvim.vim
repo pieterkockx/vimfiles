@@ -11,8 +11,8 @@ tnoremap    <F2> <C-\><C-N><C-W>c
 
 tnoremap <M-CR> <C-\><C-N>`.f$w
 
-noremap <M-p> "l]p
-noremap <M-P> "l[p
+noremap <M-p> j"l[p$
+noremap <M-P> k"l]p$
 
 augroup mynvim
 au!

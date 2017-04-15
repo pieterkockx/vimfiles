@@ -153,7 +153,7 @@ nmap <Leader>n   :silent! next<CR>:args<CR>
 nmap <Leader>N             :la<CR>:args<CR>
 nmap <Leader>p   :silent! prev<CR>:args<CR>
 nmap <Leader>P            :rew<CR>:args<CR>
-nmap <Leader>aa      :argadd %<CR>:args<CR>
+nmap <Leader>aa        :arge %<CR>:args<CR>
 nmap <Leader>ad        :argd %<CR>:args<CR>
 
 " lists
@@ -230,7 +230,7 @@ nmap <silent><F1> :if !empty(&spl) \| let &spell=!&spell \|
                   \if (&spell) \| echo "Spelling ON" \|
                   \else \| echo "Spelling OFF" \| endif \| endif<CR>
 
-" view - wrap
+" view - text
                         let _lbr = 0
                        " (lbr is ignored when wrap is off)
 nmap <silent><Leader>w :let &lbr=!&lbr \| let _lbr=(_lbr+1)%3 \|
@@ -246,7 +246,8 @@ noremap          qq q
 nnoremap <silent>qn :keepalt wincmd n<CR>
                     \:setlocal bt=nofile bh=wipe noswf<CR>
 nnoremap <silent>qN :tabnew<CR>
-		    \:setlocal bt=nofile bh=wipe noswf<CR>
+                    \:setlocal bt=nofile bh=wipe noswf<CR>
+nnoremap <silent>qS :tab split<CR>
 
 au CmdwinEnter * map <buffer> qc <C-C><C-C>
 

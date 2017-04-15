@@ -1,5 +1,5 @@
 if has("nvim")
-  nnoremap <buffer> <silent><F3> :up<CR>
+  nnoremap <buffer> <silent><S-F2> :up<CR>
   \:if !exists("b:schemeFile") \|
   \   bo new +set\ ft=scheme \| let b:schemeFile=expand("#:p") \|
   \ else \| set nomod \| endif<CR>
