@@ -39,12 +39,13 @@ syn region schemeUnquote matchgroup=Delimiter start=",@#\[" end="\]" contains=AL
 
 setlocal iskeyword=33,35-39,42-58,60-90,94,95,97-122,126,_
 
-syn keyword schemeSyntax lambda and or if cond case define let let* letrec
-syn keyword schemeSyntax begin do delay set! else =>
-syn keyword schemeSyntax quote quasiquote unquote unquote-splicing
-syn keyword schemeSyntax define-syntax let-syntax letrec-syntax syntax-rules
+syn match schemeSyntax "\((\s*\)\@<=\(define\|lambda\)\(\s\|$\)"
+syn match schemeSyntax "\((\s*\)\@<=\(quasiquote\|quote\|unquote\|unquote-splicing\)\(\s\|$\)\@="
+syn match schemeSyntax "\((\s*\)\@<=\(and\|begin\|case\|cond\|do\|if\|or\)\(\s\|$\)\@="
+syn match schemeSyntax "\((\s*\)\@<=\(=>\|delay\|let\|let\*\|letrec\|set!\)\(\s\|$\)\@="
+syn match schemeSyntax "\((\s*\)\@<=\(define-syntax\|let-syntax\|letrec-syntax\|syntax-rules\)\(\s\|$\)\@="
 " R6RS
-syn keyword schemeSyntax define-record-type fields protocol
+syn match schemeSyntax "\((\s*\)\@<=\(define-record-type\|fields\|protocol\)\(\s\|$\)\@="
 
 syn keyword schemeFunc not boolean? eq? eqv? equal? pair? cons car cdr set-car!
 syn keyword schemeFunc set-cdr! caar cadr cdar cddr caaar caadr cadar caddr
@@ -100,7 +101,7 @@ syn match schemeDelimiter !\.[ \t\[\]()";]!me=e-1
 syn match schemeDelimiter !\.$!
 
 " only highlight *stuff* and <stuff>
-syn match schemeOther ,[a-z!$%&*/:<=>?^_~+@#%-][-a-z!$%&*/:<=>?^_~0-9+.@#%]*,
+"syn match schemeOther ,[a-z!$%&*/:<=>?^_~+@#%-][-a-z!$%&*/:<=>?^_~0-9+.@#%]*,
 syn match schemeError ,[a-z!$%&*/:<=>?^_~+@#%-][-a-z!$%&*/:<=>?^_~0-9+.@#%]*[^-a-z!$%&*/:<=>?^_~0-9+.@ \t\[\]()";]\+[^ \t\[\]()";]*,
 
 " ... is a special identifier
@@ -162,13 +163,13 @@ syn region schemeSexpComment start="#;(" end=")" contains=schemeComment,schemeTe
 syn match schemeOther "##[-a-z!$%&*/:<=>?^_~0-9+.@#%]\+"
 syn match schemeExtSyntax "#:[-a-z!$%&*/:<=>?^_~0-9+.@#%]\+"
 
-syn keyword schemeExtSyntax unit uses declare hide foreign-declare foreign-parse foreign-parse/spec
-syn keyword schemeExtSyntax foreign-lambda foreign-lambda* define-external define-macro load-library
-syn keyword schemeExtSyntax let-values let*-values letrec-values ->string require-extension
-syn keyword schemeExtSyntax let-optionals let-optionals* define-foreign-variable define-record
-syn keyword schemeExtSyntax pointer tag-pointer tagged-pointer? define-foreign-type
-syn keyword schemeExtSyntax require require-for-syntax cond-expand and-let* receive argc+argv
-syn keyword schemeExtSyntax fixnum? fx= fx> fx< fx>= fx<= fxmin fxmax
+syn match schemeExtSyntax "\((\s*\)\@<=\(unit\|uses\|declare\|hide\|foreign-declare\|foreign-parse\|foreign-parse/spec\)\(\s\|$\)\@="
+syn match schemeExtSyntax "\((\s*\)\@<=\(foreign-lambda\|foreign-lambda\*\|define-external\|define-macro\|load-library\)\(\s\|$\)\@="
+syn match schemeExtSyntax "\((\s*\)\@<=\(let-values\|let\*-values\|letrec-values\|->string\|require-extension\)\(\s\|$\)\@="
+syn match schemeExtSyntax "\((\s*\)\@<=\(let-optionals\|let-optionals\*\|define-foreign-variable\|define-record\)\(\s\|$\)\@="
+syn match schemeExtSyntax "\((\s*\)\@<=\(pointer\|tag-pointer\|tagged-pointer?\|define-foreign-type\)\(\s\|$\)\@="
+syn match schemeExtSyntax "\((\s*\)\@<=\(require\|require-for-syntax\|cond-expand\|and-let\*\|receive\|argc+argv\)\(\s\|$\)\@="
+syn match schemeExtSyntax "\((\s*\)\@<=\(fixnum?\|fx=\|fx>\|fx<\|fx>=\|fx<=\|fxmin\|fxmax\)\(\s\|$\)\@="
 syn keyword schemeExtFunc ##core#inline ##sys#error ##sys#update-errno
 
 " here-string
@@ -204,6 +205,7 @@ syn sync match matchPlace grouphere NONE "^[^ \t]"
 command -nargs=+ HiLink hi def link <args>
 
 HiLink schemeFunc Function
+HiLink schemeExtFunc Function
 HiLink schemeConstant Constant
 
 HiLink schemeString String
@@ -214,7 +216,6 @@ HiLink schemeBoolean Boolean
 HiLink schemeDelimiter Special
 HiLink schemeSyntax Special
 HiLink schemeExtSyntax Special
-HiLink schemeExtFunc Special
 
 HiLink schemeComment Comment
 HiLink schemeMultilineComment Comment

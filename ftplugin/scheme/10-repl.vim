@@ -1,11 +1,10 @@
 if has("nvim")
-  nnoremap <buffer> <silent><S-F2> :up<CR>
-  \:if !exists("b:schemeFile") \|
-  \   bo new +set\ ft=scheme \| let b:schemeFile=expand("#:p") \|
+  let g:scheme_repl = "csi -q"
+  nnoremap <buffer> <silent><M-F2> :up<CR>
+  \:if !exists("b:scheme_file") \|
+  \   bo new +set\ ft=scheme \| let b:scheme_file=expand("#:p") \|
   \ else \| set nomod \| endif<CR>
-  \:exe "call termopen('csi -q " . b:schemeFile . "')" \| startinsert<CR>
-  tnoremap <buffer> <silent><F3> <C-\><C-N>:set nomod<CR>
-  \:exe "call termopen('csi -q " . b:schemeFile . "')" \| startinsert<CR>
-
-  tnoremap <buffer> <M-CR> <C-\><C-N>`.0f l
+  \:exe "call termopen('" . g:scheme_repl . " " . b:scheme_file . "')" \| startinsert<CR>
+  tnoremap <buffer> <silent><M-F2> <C-\><C-N>:set nomod<CR>
+  \:exe "call termopen('" . g:scheme_repl . " " . b:scheme_file . "')" \| startinsert<CR>
 endif
