@@ -24,7 +24,7 @@ set path=.;~;/tmp
 set tags=./tags;,tags
 
 set belloff=all
-set cmdheight=2 foldcolumn=2 laststatus=2
+set cmdheight=2 foldcolumn=2 foldminlines=0 laststatus=2
 set foldopen-=block foldopen-=jump
 set ignorecase smartcase
 set nohlsearch incsearch
@@ -47,7 +47,7 @@ function! FoldText()
     let l = l+1
     let L = getline(l)
   endwhile
-  let n = v:foldend-v:foldstart . " lines: "
+  let n = v:foldend-v:foldstart+1 . " lines: "
   return n . L
 endfunction
 set foldtext=FoldText()
@@ -65,11 +65,7 @@ function! UsesTabs()
   else
     return ""
 endfunction
-function! SavedVersions()
-  let l:u = undotree()
-  return  "(" . l:u["save_cur"] . "/" . l:u["save_last"] . ")"
-endfunction
-set statusline=---\ %(%{CheckDir()}%)%t%h%m%r%{SavedVersions()}
+set statusline=---\ %(%{CheckDir()}%)%t%h%m%r
 set statusline+=\ [%{&ff}:%{&fenc}][%{&ft}:%{&ts}%{UsesTabs()}]
 set statusline+=%=col\ %c,\ ln\ %l\ of\ %{line(\"$\")}
 
@@ -231,13 +227,14 @@ nmap <silent><F1> :if !empty(&spl) \| let &spell=!&spell \|
                   \else \| echo "Spelling OFF" \| endif \| endif<CR>
 
 " view - text
-                        let _lbr = 0
-                       " (lbr is ignored when wrap is off)
-nmap <silent><Leader>w :let &lbr=!&lbr \| let _lbr=(_lbr+1)%3 \|
-                       \let &wrap=(_lbr*_lbr)%3 \| if &wrap && &lbr \|
-                       \ echo "wrap SOFT"    \| elseif &wrap \|
-                       \ echo "wrap HARD"    \| else \|
-                       \ echo "wrap OFF"    \| endif<CR>
+                         let _lbr = 0
+                        " (lbr is ignored when wrap is off)
+nmap <silent><Leader>w  :let &lbr=!&lbr \| let _lbr=(_lbr+1)%3 \|
+                        \let &wrap=(_lbr*_lbr)%3 \| if &wrap && &lbr \|
+                        \ echo "wrap SOFT"    \| elseif &wrap \|
+                        \ echo "wrap HARD"    \| else \|
+                        \ echo "wrap OFF"    \| endif<CR>
+nmap <silent><Leader>fi :set fdm=indent<CR>:set fdm=manual<CR>
 
 " window management
 nnoremap q  <C-W>
