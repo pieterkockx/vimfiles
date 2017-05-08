@@ -15,7 +15,7 @@ nmap <buffer> <silent><F7><F7> :up<CR>
      \ "$(sed -n '/^$/q;p' " . _HOME_C . "/cc-opts \| xargs) " .
      \ expand("%:p") . " $(sed -n '$P' " . _HOME_C . "/cc-opts) &>" .
      \ QuickfixFile() . " && " . "cp " . expand("%:p") . " " . _HOME_C .
-     \ "/src/local/out/" . strftime("%y%m%d-") . expand("%:t:r") . ".c"<CR>
+     \ "/src/localhost/_/" . strftime("%y%m%d-") . expand("%:t:r") . ".c"<CR>
      \:cg \| call QuickfixList()<CR>
 
 nmap <buffer> <silent><F7><F6> :up<CR>
