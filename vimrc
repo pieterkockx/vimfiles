@@ -27,6 +27,7 @@ set belloff=all
 set cmdheight=2 foldcolumn=2 foldminlines=0 laststatus=2
 set foldopen-=block foldopen-=jump
 set ignorecase smartcase
+set noequalalways
 set nohlsearch incsearch
 set list
 let &listchars="nbsp:*,trail:~,tab:  "
