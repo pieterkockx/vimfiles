@@ -2,5 +2,5 @@ if !executable("gocode")
   finish
 endif
 
-setlocal completeopt=menuone,noselect
+setlocal completeopt=menuone
 setlocal omnifunc=gocomplete#Complete

@@ -129,11 +129,13 @@ inoremap <silent><M-u> <Esc>:silent! exe "normal! u"<CR>
 
 " unmap
 map     Q  <nop>
+map    gQ  <nop>
 imap <C-P> <nop>
 map   <F1> <nop>
 imap  <F1> <nop>
 
 " file
+imap     <C-S>              <Esc>
 nmap     <C-S>              :w<CR>
 vnoremap <C-S>              :<C-U>silent! '<,'>w! >><Space>
 nmap     g<C-F>             :up \| e <cfile><CR>
@@ -238,7 +240,7 @@ nmap <silent><Leader>w  :let &lbr=!&lbr \| let _lbr=(_lbr+1)%3 \|
 nmap <silent><Leader>fi :set fdm=indent<CR>:set fdm=manual<CR>
 
 " window management
-nnoremap q  <C-W>
+nnoremap q <C-W>
 
 noremap          qq q
 nnoremap <silent>qn :keepalt wincmd n<CR>
@@ -265,9 +267,7 @@ cnoremap  <M-f>  <C-Right>
 cnoremap  <Esc>f <C-Right>
 
 " INSERT
-inoremap <C-A>   <Esc>I
 inoremap <C-B>   <Left>
 inoremap <C-D>   <Del>
-inoremap <C-E>   <Esc>A
 inoremap <C-F>   <Right>
 inoremap <C-U>   <C-G>u<C-U>
