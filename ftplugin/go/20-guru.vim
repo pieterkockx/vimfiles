@@ -14,4 +14,4 @@ endif
 
 command! -nargs=0 Goguru call Goguru_doit(line2byte('.')+col('.')-1)
 
-nmap <buffer> <silent>gd :Goguru<CR>
+nmap <buffer> <silent>gD :Goguru<CR>
